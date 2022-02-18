@@ -1,7 +1,7 @@
 
 from flask import Flask, render_template, redirect, session, url_for, request, flash
 import dao as Banco
-
+#teste
 
 app = Flask(__name__)
 app.secret_key = 'mateus'
@@ -73,3 +73,4 @@ def logout():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
