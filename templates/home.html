@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href=" {{url_for('static', filename='./Home.css')}} ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-image: linear-gradient(-45deg, #000000, #00065d);
+            height: 100%;
+            background-attachment: fixed;
+        }
+    </style>
+    <title>Web-site-exemplo</title>
+</head>
+<body>
+    <nav id="navbar">
+        <h1 id="nav">
+            <a href=" {{ url_for('.home') }} ">Web-site-exemplo</a>
+        </h1>
+        <ul>
+            <li id="bar"><a href=" {{ url_for('.home') }} ">Exemplo</a></li>|
+            <li id="bar"><a href=" {{ url_for('.home') }} ">Exemplo</a></li>|
+            <li id="bar"><a href=" {{ url_for('.logout') }} ">Logout</a></li>
+        </ul>
+    </nav>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    {% block body %}{% endblock %}
+
+    <div id="box1">
+        <h1>Está página so aparece para usuários logados</h1>
+        <h2>exemplo:</h2>
+        <img src="../static/exemplo bloqueio.png" width="600" height="250">
+    </div>
+
+    <div id="box2">
+        <h3 id="a">De um logout e tente colocar "/home" na url</h3>
+        <h3 id="a">desta forma:</h3>
+        <img src="../static/ex.png" >
+    </div>
+
+</body>
+</html>

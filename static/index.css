@@ -1,0 +1,109 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Play', sans-serif;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(12, 12, 12);
+    color: white;
+}
+
+ul{
+    list-style: none;
+    align-items: center;
+    display: flex;
+    padding: 20px;
+    margin-right: 10px;
+}
+li{
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+#nav{
+    margin-left: 20px;
+}
+
+#box1{
+    border: 1px solid rgb(12, 12, 12);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    height: 350px;
+    width: 600px;
+    align-items: center;
+    background-color: rgb(12, 12, 12);
+    color: white;
+    border-radius: 20px;
+    margin-top: 50px;
+    text-align: center;
+    box-shadow: 10px 10px 13px 2px #000000;
+}
+
+#abox1{
+    color: white;
+    margin-left: 50px;
+    text-align: center;
+}
+
+#h1box1{
+    text-align: left;
+
+}
+
+#h3box1{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+#box2{
+    border: 1px solid rgb(12, 12, 12);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    height: 475px;
+    width: 850px;
+    align-items: center;
+    background-color: rgb(12, 12, 12);
+    color: white;
+    border-radius: 20px;
+    margin-top: 50px;
+    box-shadow: 10px 10px 13px 2px #000000;
+}
+
+#box3{
+    border: 1px solid rgb(12, 12, 12);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    height: 675px;
+    width: 750px;
+    align-items: center;
+    background-color: rgb(12, 12, 12);
+    color: white;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 10px 10px 13px 2px rgb(0, 0, 0);
+}
+
+img{
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 10px 10px 13px 2px #000000;
+}
+
+#github{
+    color: white;
+}
+
+a{
+    color: white;
+}

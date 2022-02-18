@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" {{url_for('static', filename='/cadastro.css')}} ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-image: linear-gradient(-45deg, #000000, #00065d);
+            height: 100%;
+            background-attachment: fixed;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <nav id="navbar">
+        <h1 id="nav">
+            <a href=" {{ url_for('.index') }} ">Web-site-exemplo</a>
+        </h1>
+        <ul id="bar">
+            <li id="bar"><a href=" {{ url_for('.index') }} ">Exemplo</a></li>|
+            <li id="bar"><a href=" {{ url_for('.index') }} ">Exemplo</a></li>|
+            <li id="bar"><a href=" {{ url_for('.login') }} ">Já é cadastrado?</a></li>
+        </ul>
+    </nav>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes id="mensagens">
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    {% block body %}{% endblock %}
+    <form action="/criar" method="post" id="box1">
+        <ul id="lista">
+            <li>
+                <label for="nome">Digite seu nome:</label> <br>
+                <input type="text" name="nome" id="email">
+            <li>
+                <label for="sobrenome">Digite seu sobrenome:</label> <br>
+                <input type="text" name="sobrenome" id="email">
+            <li>
+                <label for="email">Digite seu E-mail:</label> <br>
+                <input type="email" name="email" id="email"></li>
+            <li>
+                <label for="telefone">Digite seu telefone:</label> <br>
+                <input type="tel" name="telefone" id="email">
+            </li>
+            <li>
+                <label for="password">Digite sua senha:</label> <br>
+                <input type="password" name="senha" id="senha">
+            </li>
+            <li>
+                <input type="submit" id="input">
+            </li>
+        </ul>
+    </form>
+</body>
+</html>
